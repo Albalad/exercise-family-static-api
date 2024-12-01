@@ -30,6 +30,8 @@ def handle_hello():
 
     # this is how you can use the Family datastructure by calling its methods
     members = jackson_family.get_all_members()
+
+    # Validamos si existe el array de la familia
     if members:
         return jsonify(members), 200
     else:
@@ -40,6 +42,8 @@ def members(id):
 
     # this is how you can use the Family datastructure by calling its methods
     member = jackson_family.get_member(id)
+
+    # Validamos si existe el miembro de la familia
     if member:
         return jsonify(member), 200
     else:
